@@ -45,6 +45,21 @@ router.get("/", (req, res, next)=>{
     
 })
 
+//dessa forma estamos pegando a requisição por uma query
+//localhost:3000/alunoq?id=2 << aqui vai a requisição
+router.put("/", (req, res, next)=>{
+    
+    console.log(req.query.id);
+    add_aluno = {
+        id:req.query.id,
+        nome:req.query.nome
+    }
+    alunos.push(add_aluno);
+    res.send(`Aluno id: ${add_aluno.id}, nome: ${add_aluno.nome} adicionado com sucesso.`);
+    
+    
+})
+
 
 
 //retorna todos os alunos
