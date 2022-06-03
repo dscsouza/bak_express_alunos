@@ -14,8 +14,11 @@ app.use("/aluno", aluno);
 
 //resposta padrão ao se conectar
 app.get("/", (req, res) =>{
-    res.send("hello world!!")
+    res.send("Server rodando na porta 3000. Faça requisições GET via params ou query")
 })
+
+
+
 
 //porta na qual o server vai rodar
 app.listen(3000, ()=> console.log('Server rodando...'))

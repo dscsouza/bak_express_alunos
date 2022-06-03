@@ -50,7 +50,7 @@ router.get("/", (req, res, next)=>{
 //retorna todos os alunos
 router.get("/all", (req, res)=>{  
 
-    res.json(JSON.stringify(alunos))
+    res.json(alunos)
 })
 
 //dessa forma estamos pegando a requisição pelo params
